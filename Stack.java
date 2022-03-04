@@ -1,4 +1,4 @@
-public class Stack<T> implements IStack<T> {
+public abstract class Stack<T> implements IStack<T> {
    /**
     * Copyright (C), 2022-2023, FabianJuarez SaraEcheverria Jose Pablo Kiesling
     * @author Fabian Juarez, Sara Echeverria y Jose Pablo Kiesling
@@ -9,34 +9,14 @@ public class Stack<T> implements IStack<T> {
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
     
-    @Override
-    public void push(T value) {
-        // TODO Auto-generated method stub
-        
-    }
+    public abstract void push(T value); 
 
-    @Override
-    public T pull() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public abstract T pull(); 
 
-    @Override
-    public T peek() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public abstract T peek(); 
 
-    @Override
-    public int count() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
+    public abstract int count();
 
-    @Override
-    public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
-    }
+    public abstract boolean isEmpty();
 
 }

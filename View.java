@@ -125,7 +125,7 @@ public class View{
      * @param e
      */
     public void error(String e){
-        System.out.println(e); // Mensaje de error
+        System.out.println("Ha ocurrido un error : -- " + e); 
     }
     //****************************************************************
 

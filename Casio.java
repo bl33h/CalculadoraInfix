@@ -1,5 +1,4 @@
 import java.io.File;
-import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Casio {
@@ -13,8 +12,23 @@ public class Casio {
     Clase que sirve como paso de expresiones y lectura del archivo
     */
     private Calculator calculator = new Calculator();
-    private Stack<String> operations = new Stack<String>();
+    private Stack<String> operations = null;
     //---------------------------METODOS------------------------------
+    /*****************************************************************
+     * instancia el stack
+     * @param stackOption
+     * @param listOption
+     */
+    public Casio(int stackOption, int listOption){
+        if (stackOption == 3)
+            operations = new StackArrayList<String>();
+        if (stackOption == 2)
+            operations = new VectorStack<String>();
+        if (stackOption == 1)
+            operations = new ListStack<String>(listOption);
+    }
+    //****************************************************************
+
     /*****************************************************************
 	 * FileReader: Lee el archivo.
      * @return boolean
