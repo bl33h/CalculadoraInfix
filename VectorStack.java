@@ -8,4 +8,7 @@ public class VectorStack <T> {
     - Última modificación:
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
+
+    private VectorStack <T> vector;
+
 }
