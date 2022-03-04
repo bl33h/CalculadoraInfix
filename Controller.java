@@ -9,7 +9,7 @@ public class Controller {
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         
     }
 }
