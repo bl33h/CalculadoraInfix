@@ -8,22 +8,6 @@ import src.SingleLinkedList;
 
 class SingleLinkedListTest {
 
-	@Test
-	void InsertAtStartEmptyListtest() {
-		SingleLinkedList<Integer> testList = new SingleLinkedList<Integer>();
-		testList.InsertAtEnd(3);
-		assertEquals(testList.Get(0), 3);
-	}
-	
-	@Test
-	void InsertAtStartNonEmptyListtest() {
-		SingleLinkedList<Integer> testList = new SingleLinkedList<Integer>();
-		testList.InsertAtEnd(3);
-		testList.InsertAtEnd(5);
-		assertEquals(testList.Get(0), 5);
-		assertEquals(testList.Count(), 2);
-		assertEquals(testList.Get(1), 3);
-	}
 	
 	@Test
 	void InsertAtEndEmptyListtest() {
@@ -37,29 +21,30 @@ class SingleLinkedListTest {
 		SingleLinkedList<String> testList = new SingleLinkedList<String>();
 		testList.InsertAtEnd("Hola");
 		testList.InsertAtEnd("Mundo");
-		assertEquals(testList.Get(0), "Hola");
+		assertEquals(testList.Get(0), "Mundo");
 		assertEquals(testList.Count(), 2);
-		assertEquals(testList.Get(1), "Mundo");
+		assertEquals(testList.Get(1), "Hola");
 	}
 	
 	@Test
-	void InsertAtIndexNonEmptyListtest() {
-		SingleLinkedList<String> testList = new SingleLinkedList<String>();
-		testList.InsertAtEnd("Hola");
-		testList.InsertAtEnd("Mundo");
-		
-		assertEquals(testList.Count(), 4);
-		assertEquals(testList.Get(0), "Hola");
-		assertEquals(testList.Get(3), "Mundo");
-	}
-	
-
-	@Test
-	void InsertAtIndexEmptyListtest() {
+	void DeleteAtEndNonEmptyOnlyOneElementListtest() {
 		SingleLinkedList<String> testList = new SingleLinkedList<String>();
 		testList.InsertAtEnd("Hola");
 		assertEquals(testList.Count(), 1);
-		assertEquals(testList.Get(0), "Hola");
+		assertEquals(testList.DeleteAtEnd(), "Hola");
+		assertEquals(testList.Count(), 0);
+	}
+	
+	@Test
+	void DeleteAtEndNonEmptyManyElementsListtest() {
+		SingleLinkedList<String> testList = new SingleLinkedList<String>();
+		testList.InsertAtEnd("Hola");
+		testList.InsertAtEnd("Mundo");
+		assertEquals(testList.Count(), 2);
+		assertEquals(testList.DeleteAtEnd(), "Mundo");
+		assertEquals(testList.Count(), 1);
+		assertEquals(testList.DeleteAtEnd(), "Hola");
+		assertEquals(testList.Count(), 0);
 	}
 
 }
