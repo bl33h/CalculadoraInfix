@@ -8,4 +8,15 @@ public interface IStack<T> {
     - Última modificación:
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
-}
+
+
+        void push(T value);
+        
+        T pull();
+        
+        T peek();
+        
+        int count();
+        
+        boolean isEmpty();
+    }
