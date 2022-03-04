@@ -43,7 +43,7 @@ public class View{
         while(!salir.equalsIgnoreCase("si")){
             //Se imprime el menu en pantalla y se le pide al usuario un numero del menu
             System.out.println("\n************************* Escoja el stack que desea utilizar ************************************\n");
-            System.out.println("1. list");
+            System.out.println("1. List");
             System.out.println("2. Vector");
             System.out.println("3. Arraylist");
             System.out.println("4. Salir");
