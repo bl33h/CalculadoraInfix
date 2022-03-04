@@ -23,7 +23,6 @@ public class InfixPostfix {
     */
 
     //---------------------------PROPIEDADES--------------------------
-    private Stack<String> stack = new Stack<String>();
     private String[] operands = {"0", "1", "2","3","4","5","6","7","8","9"};
     private String[] operators = {"+","-","*","/", "(", ")"};
 
@@ -33,7 +32,7 @@ public class InfixPostfix {
      * @param infixExpresion
      * @return
      */
-    public String convert(String infixExpresion){
+    public String convert(String infixExpresion, Stack<String> stack){
         String postfixExpresion = "";
         String[] values = infixExpresion.split(" "); //Separar los valores en la expresión
 

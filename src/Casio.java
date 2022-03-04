@@ -13,19 +13,19 @@ public class Casio {
     */
     private Calculator calculator = new Calculator();
     private Stack<String> operations = null;
+    private Stack<Integer> stackInteger = null;
+    private Stack<String> stackString = null;
+
     //---------------------------METODOS------------------------------
     /*****************************************************************
-     * instancia el stack
+     * instancia los stack
      * @param stackOption
      * @param listOption
      */
     public Casio(int stackOption, int listOption){
-        if (stackOption == 3)
-            operations = new StackArrayList<String>();
-        if (stackOption == 2)
-            operations = new VectorStack<String>();
-        if (stackOption == 1)
-            operations = new ListStack<String>(listOption);
+        operations = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
+        stackInteger = (new FactoryCasio<Integer>()).newCasio(stackOption, listOption);
+        stackString = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
     }
     //****************************************************************
 
@@ -63,7 +63,7 @@ public class Casio {
         if(read())
             while(!this.operations.isEmpty()){
                 String operation = this.operations.pull();
-                int result = calculator.Evaluate(operation);
+                int result = calculator.Evaluate(operation, stackInteger, stackString);
                 System.out.println(operation + "\n" + result + "\n"+ "\n");
             }
     }

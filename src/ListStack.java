@@ -16,10 +16,7 @@ public class ListStack <T> extends Stack<T>{
      */
     public ListStack(int listOption) {
         super();
-		if (listOption == 1)
-            list = new SingleLinkedList<T>();
-        else if (listOption == 2)
-            list = new DoubleLinkedList<T>();
+		list = (new FactoryList<T>()).newList(listOption);
 	}
     //****************************************************************
 
