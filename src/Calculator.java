@@ -16,8 +16,8 @@ public class Calculator {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: InfixPostfix.java
     @version: 
-        - Creación: 04/03/2022
-        - Última modificación: 
+        - Creacion: 04/03/2022
+        - Última modificacion: 
 
     Clase que calcula la expresion
     */
@@ -27,7 +27,7 @@ public class Calculator {
     private String[] operators = {"+","-","*","/"};
 
     /*****************************************************************
-	 * Evaluate: evalúa la expresión ingresada y retorna el resultado
+	 * Evaluate: evalúa la expresion ingresada y retorna el resultado
 	 * @param expresion
 	 * @return int
      * @Override

@@ -14,8 +14,8 @@ public class SingleLinkedList<T> extends List<T> {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: SingleLinkedList.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creacion: 02/03/2022
+        - Última modificacion: 
 
     Clase abstracta de listas
     */
@@ -50,7 +50,7 @@ public class SingleLinkedList<T> extends List<T> {
                 end = pretemp;
                 end.setNext(null);
                 count--;
-                return temp.getValue();
+                return pretemp.getValue();
             }
     }
     //****************************************************************

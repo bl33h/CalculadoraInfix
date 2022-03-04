@@ -15,18 +15,32 @@ public class Casio {
     private Stack<String> operations = null;
     private Stack<Integer> stackInteger = null;
     private Stack<String> stackString = null;
+    private boolean flag = false;
 
     //---------------------------METODOS------------------------------
     /*****************************************************************
-     * instancia los stack
+     * instancia los stack y crea por patrón singleton la calculadora
      * @param stackOption
      * @param listOption
      */
-    public Casio(int stackOption, int listOption){
-        operations = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
-        stackInteger = (new FactoryCasio<Integer>()).newCasio(stackOption, listOption);
-        stackString = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
+    public Casio(int stackOption, int listOption) throws SingletonException{
+        if (flag) //Ya hay creada
+            System.out.println("Ya ha sido creada la Calculadora");
+        else{ //Se crea
+            operations = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
+            stackInteger = (new FactoryCasio<Integer>()).newCasio(stackOption, listOption);
+            stackString = (new FactoryCasio<String>()).newCasio(stackOption, listOption);
+            flag = true;
+        }
     }
+    //****************************************************************
+
+    /*****************************************************************
+     * se ejecuta al finalizar
+     */
+    public void finalize() {
+		flag = false; //reiniciar el indice
+	}
     //****************************************************************
 
     /*****************************************************************
