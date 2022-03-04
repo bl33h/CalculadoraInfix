@@ -33,12 +33,14 @@ public class DoubleLinkedList<T> extends List<T> {
     public void InsertAtEnd(T value) {
         DoubleNode<T> newNode = new DoubleNode<T>(value);
 		
-		if (IsEmpty()) { //Si está vacío
+		if (IsEmpty()) {
+		
 			start = newNode;
 			end = newNode;
 			start.setNext(start);
 			start.setPrevious(start);
 		} else {
+			
 			newNode.setNext(start);
 			start.setPrevious(newNode);
 			newNode.setPrevious(end);
@@ -55,22 +57,26 @@ public class DoubleLinkedList<T> extends List<T> {
      * @return
      */
     public T DeleteAtEnd() {
-        DoubleNode<T> actualNode = start;
-        DoubleNode<T> previousNode = null;
-
-        while(actualNode.getNext()!= null){
-            previousNode = actualNode;
-            actualNode = (DoubleNode<T>) actualNode.getNext();
+        if (!IsEmpty()) {
+			
+			if (Count() == 1) {
+				DoubleNode<T> temp = start;
+				start = null;
+				end = null;
+				count--;
+				return temp.getValue();
+			} else {
+				DoubleNode<T> temp = start;
+				end.setNext(temp.getNext());
+				((DoubleNode<T>) temp.getNext()).setPrevious(end);
+				start = (DoubleNode<T>) temp.getNext();
+				count--;
+				return temp.getValue();
+			}
+			
+		} else {
+			return null;
         }
-        if(previousNode == null)
-            start = null;
-        
-        else
-            previousNode.setNext(null);
-        count--;
-        return (T) previousNode.getValue();
-
     }
     //****************************************************************
-    
 }

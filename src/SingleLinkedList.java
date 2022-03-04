@@ -26,33 +26,17 @@ public class SingleLinkedList<T> extends List<T> {
      * @return
      */
     public T DeleteAtEnd() {
-        if (Count() == 1) //Si se elimina el único nodo
-            {
-                Node<T> temp = start;
-                start = null;
-                end = null;
-                count--;
-                return temp.getValue();
-            }
-            else
-            {
-                Node<T> pretemp = start;
-                Node<T> temp = start.getNext();
+		if (!IsEmpty())
+        {
+            Node<T> temp = start;
+            start = start.getNext();
+            count--;
+            return temp.getValue();
+        }
 
-                //Buscar donde insertar
-                while (temp != null)
-                {
-                    pretemp = temp;
-                    temp = temp.getNext();
-                }
+        return null;
+	}
 
-                //Eliminar el nodo
-                end = pretemp;
-                end.setNext(null);
-                count--;
-                return pretemp.getValue();
-            }
-    }
     //****************************************************************
 
     /*****************************************************************
@@ -60,7 +44,7 @@ public class SingleLinkedList<T> extends List<T> {
      * @param value
      */
     public void InsertAtEnd(T value) {
-        Node<T> newNode = new Node<T>(value);
+		Node<T> newNode = new Node<T>(value);
 
         if (IsEmpty())
         {
