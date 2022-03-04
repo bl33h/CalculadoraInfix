@@ -10,8 +10,9 @@
 
 public class SingleLinkedList<T> extends List<T> {
     /**
-    @author: José Pablo Kiesling Lange
-    Nombre del programa: Node.java
+    * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
+    * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
+    Nombre del programa: SingleLinkedList.java
     @version: 
         - Creación: 02/03/2022
         - Última modificación: 
@@ -45,7 +46,7 @@ public class SingleLinkedList<T> extends List<T> {
                     temp = temp.getNext();
                 }
 
-                //Delete the node
+                //Eliminar el nodo
                 end = pretemp;
                 end.setNext(null);
                 count--;

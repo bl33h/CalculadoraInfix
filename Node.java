@@ -10,7 +10,8 @@
 
 public class Node<T>{
     /**
-    @author: José Pablo Kiesling Lange
+    * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
+    * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: Node.java
     @version: 
         - Creación: 02/03/2022

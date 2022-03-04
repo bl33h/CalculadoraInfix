@@ -10,8 +10,9 @@
 
 public interface IList<T> {
     /**
-    @author: José Pablo Kiesling Lange
-    Nombre del programa: Node.java
+    * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
+    * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
+    Nombre del programa: IList.java
     @version: 
         - Creación: 02/03/2022
         - Última modificación: 
@@ -19,11 +20,32 @@ public interface IList<T> {
     Interfaz de listas
     */
 
+    //---------------------------MÉTODOS------------------------------
+    /*****************************************************************
+     * inserta un elemento al final
+     * @param value
+     */
     void InsertAtEnd(T value);
+    //****************************************************************
 
+    /*****************************************************************
+     * elimina al final
+     * @return
+     */
     T DeleteAtEnd();
+    //****************************************************************
 
+    /*****************************************************************
+     * retorna si hay nodos
+     * @return
+     */
     boolean IsEmpty();
+    //****************************************************************
     
+    /*****************************************************************
+     * retorna el número de nodos
+     * @return
+     */
     int Count();
+    //****************************************************************
 }

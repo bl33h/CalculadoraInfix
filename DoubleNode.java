@@ -10,8 +10,9 @@
 
 public class DoubleNode<T> extends Node<T>{
     /**
-    @author: José Pablo Kiesling Lange
-    Nombre del programa: Node.java
+    * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
+    * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
+    Nombre del programa: DoubleNode.java
     @version: 
         - Creación: 02/03/2022
         - Última modificación: 
