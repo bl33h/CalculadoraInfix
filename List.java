@@ -38,6 +38,41 @@ public abstract class List<T> implements IList<T> {
      * @return
      */
     public abstract T DeleteAtEnd();
+    //****************************************************************//****************************************************************
+
+    /*****************************************************************
+     * retorna el elemento que se le indica por indice
+     * @param index
+     * @return
+     */
+    public T Get(int index){
+        if (!IsEmpty())
+        {
+            if (index == 0) //Si quiere el primero
+                return start.getValue();
+            else if (index == (Count() - 1))
+                return end.getValue();
+            else if ((index > 0) && (index < (Count() - 1)))
+            {
+                Node<T> temp = start;
+                int i = 0;
+                while ((temp != null) && (i != index))
+                {
+                    temp = temp.getNext();
+                    i++;
+                }
+
+                if (temp != null)
+                    return temp.getValue();
+                else
+                    return null;
+            }
+            else
+                return null;
+        }
+
+        return null;
+    }
     //****************************************************************
 
     /*****************************************************************

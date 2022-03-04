@@ -8,36 +8,40 @@ public class ListStack <T> extends Stack<T>{
     - Última modificación:
     */
     
-    private ListStack <T> list;
+    private List <T> list = null;
 
-    public ListStack(int ListOption) {
+    public ListStack(int listOption) {
         super();
-		list = new ListStack<T>(ListOption);
+		if (listOption == 1)
+            list = new SingleLinkedList<T>();
+        else if (listOption == 2)
+            list = new DoubleLinkedList<T>();
 	}
 
     @Override
     public void push(T value) {
+        list.InsertAtEnd(value);
     }
 
     @Override
     public T pull() {
-        return null;
+        return list.DeleteAtEnd();
     }
 
     @Override
     public T peek() {
-        return null;
+        return list.Get(count()-1);
     }
 
 
     @Override
     public int count() {
-        return 0;
+        return list.Count();
     }
 
     @Override
 	public boolean isEmpty() {		
-		return list.isEmpty();
+		return list.IsEmpty();
 	}
 
 }
