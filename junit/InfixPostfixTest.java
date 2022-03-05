@@ -16,3 +16,4 @@ public class InfixPostfixTest {
     assertEquals(1, calculator.Evaluate("( 5 - 4 )",stackInteger, stackString, 1));
     //
 }
+}
