@@ -27,9 +27,9 @@ public class FactoryList<T> {
      */
     public List<T> newList(int listOption){
         List<T> list = null;
-        if (listOption == 1)
+        if (listOption == 2)
             list = new SingleLinkedList<T>();
-        else if (listOption == 2)
+        else if (listOption == 1)
             list = new DoubleLinkedList<T>();
         return list;
     }

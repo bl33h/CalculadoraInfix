@@ -12,7 +12,7 @@ public class FactoryCasio<T> {
     /**
     * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
-    Nombre del programa: FactoryCasio.java
+    Nombre del programa: InfixPostfix.java
     @version: 
         - Creación: 04/03/2022
         - Última modificación: 

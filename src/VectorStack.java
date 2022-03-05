@@ -9,11 +9,12 @@ public class VectorStack <T> extends Stack <T>{
     - Última modificación:
     */
 
+    //---------------------------PROPIEDADES--------------------------
     private Vector<T> vector;
 
+    //---------------------------MÉTODOS------------------------------
     /*****************************************************************
-     * se instancia el vector.
-     * @param 
+     * Stack: instancia el vector
      */
     public VectorStack (){
         vector = new Vector<T>();
@@ -21,7 +22,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * push: agrega un elemento genérico.
+     * push: agrega un elemento genérico
      * @param value 
      */
     @Override
@@ -31,7 +32,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * pull: retorna el último valor ingresado y lo elimina de la pila.
+     * pull: retorna el último valor ingresado y lo elimina de la pila
      * @return T
      */
     @Override
@@ -48,7 +49,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * peek: retorna el último valor de la pila.
+     * peek: retorna el último valor de la pila
      * @return T
      */
     @Override
@@ -58,7 +59,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * count: retorna el número de elementos en la pila.
+     * count: retorna el número de elementos en la pila
      * @return int
      */
     @Override
@@ -68,7 +69,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * isEmpty: retorna el estado de la pila.
+     * isEmpty: retorna el estado de la pila
      * @return boolean
      */
     @Override

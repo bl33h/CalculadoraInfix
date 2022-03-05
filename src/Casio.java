@@ -54,13 +54,12 @@ public class Casio {
             read = true;
             File file = new File("datos.txt");
             Scanner reader = new Scanner(file);
-            while(reader.hasNextLine()){
+            while(reader.hasNextLine())
                 operations.push(reader.nextLine());
-                reader.close();
-            }
+            reader.close();
         }catch(FileNotFoundException e){
             String s = "Casio.read:" + e.getMessage();
-            throw new FileNotFoundException(s);
+			throw new FileNotFoundException(s);
         }
         return read;
     }
@@ -72,13 +71,12 @@ public class Casio {
      * @return String
      * @throws FileNotFoundException
      */
-    public void doOperation() throws FileNotFoundException{
-
+    public void doOperation(int listOption) throws FileNotFoundException{
         if(read())
             while(!this.operations.isEmpty()){
                 String operation = this.operations.pull();
-                int result = calculator.Evaluate(operation, stackInteger, stackString);
-                System.out.println(operation + "\n" + result + "\n"+ "\n");
+                int result = calculator.Evaluate(operation, stackInteger, stackString, listOption);
+                System.out.println("Expresion en InFix: " + operation + "\n" + "Resultado: " + result + "\n"+ "\n");
             }
     }
     //****************************************************************

@@ -12,7 +12,7 @@ public class Controller {
     static Casio casio = null;
     public static void main(String[] args){
         int numMenu;
-        int numMenu2;
+        int numMenu2 = -1;
         View miVista = new View();
         miVista.welcome(); //Despliegue el titulo del programa
         numMenu = -1;
@@ -23,7 +23,7 @@ public class Controller {
                 numMenu2 = -1;
                 switch(numMenu){
                     case 1: //List
-                    while (numMenu2 != 3){
+                    while (numMenu2 != 3 && flag){
                         numMenu2 = miVista.menu2();
                         switch(numMenu2){
                             case 1:
@@ -51,7 +51,9 @@ public class Controller {
                     break;
                 }
             }
-                casio.doOperation();
+            if(numMenu2 != 1)
+                numMenu2 = 2;
+            casio.doOperation(numMenu2);
         } catch (Exception e) {
             String s = "ERROR: " + e.getMessage();
             miVista.error(s);

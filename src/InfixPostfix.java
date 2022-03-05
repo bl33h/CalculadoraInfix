@@ -7,9 +7,7 @@
 #     #        #       #                #   #             #      #     # #    #       #
 #      #    ########   ########   #######   ########   #######   #      ##    #########
 */
-
 import java.util.Arrays;
-
 public class InfixPostfix {
     /**
     * Copyright (C), 2022-2023, The_Kiesling FabianJuarez SaraEcheverria 
@@ -21,10 +19,10 @@ public class InfixPostfix {
 
     Clase que convierte de infix a postfix
     */
-
     //---------------------------PROPIEDADES--------------------------
     private String[] operands = {"0", "1", "2","3","4","5","6","7","8","9"};
-    private String[] operators = {"+","-","*","/", "(", ")"};
+    private FactoryList<String> fList = new FactoryList<String>();
+    private List<String> lst;
 
     //---------------------------MÉTODOS------------------------------
     /*****************************************************************
@@ -32,53 +30,76 @@ public class InfixPostfix {
      * @param infixExpresion
      * @return
      */
-    public String convert(String infixExpresion, Stack<String> stack){
+    public String convert(String infixExpresion, Stack<String> stack, int listOption){
         String postfixExpresion = "";
-        String[] values = infixExpresion.split(" "); //Separar los valores en la expresión
+        lst = fList.newList(listOption);
+		boolean valid = false;
+		
+		//Validacion de parejas completas de parentesis ()
+		int incomplete_pairs=0;
+		for(int i=0; i<infixExpresion.length();i++) {
+			if(infixExpresion.charAt(i)=='(') {
+				incomplete_pairs++;
+			}else if(infixExpresion.charAt(i)==')'){
+				incomplete_pairs--;
+			}
+		}
 
-        for(int i = 0; i < values.length; i++){ //Recorrer toda la expresión
-            if(Arrays.asList(operands).contains(values[i])) //Si es Número
-                stack.push(values[i]);
-            else if(Arrays.asList(operators).contains(values[i])){ //Si es Operador
-                switch(values[i]){
-                    case "(":
-                        stack.push(values[i]);
-                    break;
-                    case ")":
-                        while (!stack.isEmpty()){
-                            String value = stack.pull();
-                            if(value != "(")
-                                postfixExpresion += value;
-                            else
-                                break;
-                        }
-                    break;
-                    default:
-                        if(!stack.isEmpty()){
-                            while (!stack.isEmpty()){
-                                String value = stack.pull();
-                                if(value != "("){
-                                    stack.push(value);
-                                    break;
-                                } else{
-                                    if (priorityOperator(values[i]) > priorityOperator(value)){
-                                        stack.push(value);
-                                        break;
-                                    }
-                                    else 
-                                        postfixExpresion += values[i];
-                                }  
-                            }
-                            stack.push(values[i]);
-                        } else
-                            stack.push(values[i]);
-                }
-            }
-        }
-        while (!stack.isEmpty())
-            postfixExpresion += stack.pull();
-        
-        return postfixExpresion;
+        //Parejas completas
+		if(incomplete_pairs==0) {
+			valid = true;
+		}else if (incomplete_pairs>0) {
+			valid = false;
+		}else if (incomplete_pairs<0) {
+			valid = false;
+		}
+		
+		//Se guardan los tokens de la expresion original
+		String[] tokens = infixExpresion.split(" ");
+		
+		//Si se cumple la validacion
+		if(valid) {
+			for(int i = 0; i < tokens.length ; i++) {
+				
+				//Numeros del 0 al 9
+	            if(Arrays.stream(operands).anyMatch(tokens[i]::equals)){
+	                lst.InsertAtEnd(tokens[i]);
+	            }
+	            //Parentesis (
+	            else if(tokens[i].equals("(")) {
+	            	stack.push(tokens[i]);
+	            }
+	            //Parentesis )
+	            else if(tokens[i].equals(")")) {
+	            	//Hasta encontrar a su pareja
+	            	while(!stack.isEmpty() && !stack.peek().equals("(")) {
+	            			lst.InsertAtEnd(stack.pull());
+	            	}
+        			stack.pull();
+	            }
+	            //Operadores
+	            else {
+	            	while(!stack.isEmpty() && priorityOperator(stack.peek()) >= priorityOperator(tokens[i])) {
+	            		lst.InsertAtEnd(stack.pull());
+	            	}
+	            	stack.push(tokens[i]);
+	            }
+			}
+			
+			while(!stack.isEmpty()){
+	            lst.InsertAtEnd(stack.pull());
+	        }
+			
+			//Se pasa de array al String resultado
+			for(int i = 0; i < lst.Count() ; i++) {
+				postfixExpresion += lst.Get(i) + " ";
+			}
+			
+		}else {
+			postfixExpresion = null;
+		}
+		
+		return postfixExpresion;
     }
     //****************************************************************
 
@@ -89,9 +110,9 @@ public class InfixPostfix {
      */
     private int priorityOperator(String operator){
         int resultado = 0;
-        if (operator == "+" || operator == "-")
+        if (operator.equals("+") || operator.equals("-"))
             resultado = 1;
-        else if (operator == "*" || operator == "/")
+        else if (operator.equals("*") || operator.equals("/"))
             resultado = 2;
         return resultado;
     }

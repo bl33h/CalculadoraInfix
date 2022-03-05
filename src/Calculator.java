@@ -22,7 +22,7 @@ public class Calculator {
     Clase que calcula la expresion
     */
     //---------------------------PROPIEDADES--------------------------
-    private InfixPostfix converter = new InfixPostfix();
+    private InfixPostfix converter;
     private String[] operands = {"0", "1", "2","3","4","5","6","7","8","9"};
     private String[] operators = {"+","-","*","/"};
 
@@ -32,8 +32,10 @@ public class Calculator {
 	 * @return int
      * @Override
 	 */
-    public int Evaluate(String expresion, Stack<Integer> stack, Stack<String> stackString){
-        String postfixExpresion = converter.convert(expresion, stackString);
+    public int Evaluate(String expresion, Stack<Integer> stack, Stack<String> stackString, int listOption){
+        converter = new InfixPostfix();
+        String postfixExpresion = converter.convert(expresion, stackString,listOption);
+        System.out.println("Expresion en PostFix: " + postfixExpresion);
         boolean flag = true;
         int num1, num2, result = 0;
         String[] values = postfixExpresion.split(" "); //Separar los valores en la expresión

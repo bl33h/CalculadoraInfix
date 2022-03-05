@@ -19,11 +19,10 @@ public abstract class List<T> implements IList<T> {
 
     Clase abstracta de listas
     */
-
     //---------------------------PROPIEDADES--------------------------
-    protected Node<T> start;
-    protected Node<T> end;
-    int count;
+    private int count;
+    private Node<T> start;
+    private Node<T> end;
 
     //---------------------------MÉTODOS------------------------------
     /*****************************************************************
@@ -34,10 +33,24 @@ public abstract class List<T> implements IList<T> {
     //****************************************************************
 
     /*****************************************************************
+     * inserta un elemento al final
+     * @param value
+     */
+    public abstract void InsertAtStart(T value);
+    //****************************************************************
+
+    /*****************************************************************
      * elimina al final
      * @return
      */
     public abstract T DeleteAtEnd();
+    //****************************************************************
+
+    /*****************************************************************
+     * elimina al final
+     * @return
+     */
+    public abstract T DeleteAtStart();
     //****************************************************************
 
     /*****************************************************************

@@ -8,18 +8,16 @@ public class ListStack <T> extends Stack<T>{
     - Última modificación:
     */
     
-    private List <T> list = null; // objeto
+    private List<T> list = null; 
 
     /*****************************************************************
      * instancia la opcion de lista.
      * @param listOption
      */
     public ListStack(int listOption) {
-        super();
-		list = (new FactoryList<T>()).newList(listOption);
+		this.list = (new FactoryList<T>()).newList(listOption);
 	}
     //****************************************************************
-
 
     /*****************************************************************
      * inserta un valor al final.
@@ -27,7 +25,7 @@ public class ListStack <T> extends Stack<T>{
      */
     @Override
     public void push(T value) {
-        list.InsertAtEnd(value);
+        list.InsertAtStart(value);
     }
     //****************************************************************
 
@@ -37,7 +35,7 @@ public class ListStack <T> extends Stack<T>{
      */
     @Override
     public T pull() {
-        return list.DeleteAtEnd();
+        return list.DeleteAtStart();
     }
     //****************************************************************
 
@@ -47,7 +45,7 @@ public class ListStack <T> extends Stack<T>{
      */
     @Override
     public T peek() {
-        return list.Get(count()-1);
+        return list.Get(0);
     }
     //****************************************************************
 
