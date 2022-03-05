@@ -5,7 +5,7 @@ public abstract class Stack<T> implements IStack<T> {
     * FileName: Stack
     @version:
     - Creación: 04/03/2022
-    - Última modificación:
+    - Última modificación:04/03/2022
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
     

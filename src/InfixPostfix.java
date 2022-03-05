@@ -14,8 +14,8 @@ public class InfixPostfix {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: InfixPostfix.java
     @version: 
-        - Creación: 04/03/2022
-        - Última modificación: 
+        - Creacion: 04/03/2022
+        - Ultima modificación: 04/03/2022
 
     Clase que convierte de infix a postfix
     */
@@ -24,9 +24,9 @@ public class InfixPostfix {
     private FactoryList<String> fList = new FactoryList<String>();
     private List<String> lst;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
-     * convierte la expresión infix a postfix
+     * convierte la expresion infix a postfix
      * @param infixExpresion
      * @return
      */
@@ -104,7 +104,7 @@ public class InfixPostfix {
     //****************************************************************
 
     /*****************************************************************
-     * indica la prioridad del operador (1 si es + ó -; 2 si es * ó /)
+     * indica la prioridad del operador (1 si es + o -; 2 si es * o /)
      * @param operator
      * @return
      */

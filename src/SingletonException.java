@@ -14,8 +14,8 @@ public class SingletonException extends RuntimeException {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: SingletonException.java
     @version: 
-        - Creacion: 02/03/2022
-        - Última modificacion: 
+        - Creacion: 04/03/2022
+        - Ultima modificacion: 04/03/2022
 
     Clase que arroja un error de ejecucion
     */

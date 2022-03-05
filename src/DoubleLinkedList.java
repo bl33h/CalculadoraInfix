@@ -14,8 +14,8 @@ public class DoubleLinkedList<T> extends List<T>{
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: DoubleLinkedList.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creación: 04/03/2022
+        - Ultima modificación: 04/03/2022
 
     Clase abstracta de listas
      */
@@ -25,7 +25,7 @@ public class DoubleLinkedList<T> extends List<T>{
 	private DoubleNode<T> end;
 	private int count;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * instancia los valores
      */
@@ -183,7 +183,7 @@ public class DoubleLinkedList<T> extends List<T>{
     //****************************************************************
 
 	/*****************************************************************
-     * retorna el número de nodos
+     * retorna el numero de nodos
      * @return
      */
 	public int Count() {

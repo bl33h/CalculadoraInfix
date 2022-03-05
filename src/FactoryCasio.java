@@ -14,14 +14,14 @@ public class FactoryCasio<T> {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: InfixPostfix.java
     @version: 
-        - Creación: 04/03/2022
-        - Última modificación: 
+        - Creacion: 04/03/2022
+        - Ultima modificación: 04/03/2022
 
-    Clase que usa el patrón Factory para la creación de la pila
+    Clase que usa el patron Factory para la creacion de la pila
     */
 
     /*****************************************************************
-     * crea una pila genérica según la opción que se le manda
+     * crea una pila generica segun la opcion que se le manda
      * @param stackOption
      * @param listOption
      * @return

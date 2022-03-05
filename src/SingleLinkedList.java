@@ -14,8 +14,8 @@ public class SingleLinkedList<T> extends List<T> {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: SingleLinkedList.java
     @version: 
-        - Creacion: 02/03/2022
-        - Última modificacion: 
+        - Creacion: 04/03/2022
+        - Ultima modificacion: 04/03/2022
 
     Clase abstracta de listas
     */
@@ -25,7 +25,7 @@ public class SingleLinkedList<T> extends List<T> {
     private Node<T> start;
     private Node<T> end;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * elimina al final
      * @return

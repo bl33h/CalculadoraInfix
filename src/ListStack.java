@@ -4,8 +4,8 @@ public class ListStack <T> extends Stack<T>{
     * @author Fabian Juarez, Sara Echeverria y Jose Pablo Kiesling
     * FileName: ListStack
     @version:
-    - Creación: 04/03/2022
-    - Última modificación:
+    - Creacion: 04/03/2022
+    - Ultima modificación:04/03/2022
     */
     
     private List<T> list = null; 
@@ -30,7 +30,7 @@ public class ListStack <T> extends Stack<T>{
     //****************************************************************
 
     /*****************************************************************
-     * retorna el último valor ingresado y lo elimina de la pila.
+     * retorna el ultimo valor ingresado y lo elimina de la pila.
      * @return T
      */
     @Override
@@ -40,7 +40,7 @@ public class ListStack <T> extends Stack<T>{
     //****************************************************************
 
     /*****************************************************************
-     * retorna el último valor de la pila.
+     * retorna el ultimo valor de la pila.
      * @return T
      */
     @Override
@@ -50,7 +50,7 @@ public class ListStack <T> extends Stack<T>{
     //****************************************************************
 
     /*****************************************************************
-     * retorna el número de elementos en la pila.
+     * retorna el numero de elementos en la pila.
      * @return int
      */
     @Override
