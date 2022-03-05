@@ -14,13 +14,13 @@ public interface IList<T> {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: IList.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creacion: 02/03/2022
+        - Ultima modificación: 04/03/2022
 
     Interfaz de listas
     */
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * inserta un elemento al final
      * @param value
@@ -51,7 +51,7 @@ public interface IList<T> {
     //****************************************************************
 
     /*****************************************************************
-     * retorna el número de nodos
+     * retorna el numero de nodos
      * @return
      */
     int Count();

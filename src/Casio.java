@@ -8,7 +8,7 @@ public class Casio {
     * FileName: Casio
     @version:
     - Creación: 04/03/2022
-    - Última modificación:
+    - ultima modificación:04/03/2022
     Clase que sirve como paso de expresiones y lectura del archivo
     */
     private Calculator calculator = new Calculator();
@@ -19,7 +19,7 @@ public class Casio {
 
     //---------------------------METODOS------------------------------
     /*****************************************************************
-     * instancia los stack y crea por patrón singleton la calculadora
+     * instancia los stack y crea por patron singleton la calculadora
      * @param stackOption
      * @param listOption
      */

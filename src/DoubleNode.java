@@ -14,10 +14,10 @@ public class DoubleNode<T>{
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: DoubleNode.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creación: 04/03/2022
+        - Última modificación:04/03/2022
 
-    Clase que sirve como nodo en la implementación de listas dobles 
+    Clase que sirve como nodo en la implementacion de listas dobles 
     */ 
 
     //---------------------------PROPIEDADES--------------------------
@@ -25,7 +25,7 @@ public class DoubleNode<T>{
 	private DoubleNode<T> next;
 	private DoubleNode<T> previous;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * constructor que asigna el valor del nodo
      * @param value

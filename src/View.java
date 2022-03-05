@@ -5,15 +5,15 @@ public class View{
     * @author Fabian Juarez, Sara Echeverria y Jose Pablo Kiesling
     * FileName: View
     @version:
-    - Creación: 04/03/2022
-    - Última modificación:
+    - Creacion: 04/03/2022
+    - Ultima modificacion:04/03/2022
     Clase que sirve como vista hacia el usuario la cual imprimira a pantalla
     */
 
     //---------------------------PROPIEDADES--------------------------
     private Scanner scan;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      *
      */

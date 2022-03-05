@@ -14,8 +14,8 @@ public abstract class List<T> implements IList<T> {
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: List.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creacion: 04/03/2022
+        - Ultima modificación:04/03/2022
 
     Clase abstracta de listas
     */
@@ -24,7 +24,7 @@ public abstract class List<T> implements IList<T> {
     private Node<T> start;
     private Node<T> end;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * inserta un elemento al final
      * @param value
@@ -47,7 +47,7 @@ public abstract class List<T> implements IList<T> {
     //****************************************************************
 
     /*****************************************************************
-     * elimina al final
+     * elimina al inicio
      * @return
      */
     public abstract T DeleteAtStart();
@@ -98,7 +98,7 @@ public abstract class List<T> implements IList<T> {
     //****************************************************************
 
     /*****************************************************************
-     * retorna el número de nodos
+     * retorna el numero de nodos
      * @return
      */
     public int Count() {

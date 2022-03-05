@@ -14,17 +14,17 @@ public class Node<T>{
     * @author Jose Pablo Kiesling, Fabian Juarez y Sara Echeverria
     Nombre del programa: Node.java
     @version: 
-        - Creación: 02/03/2022
-        - Última modificación: 
+        - Creacion: 02/03/2022
+        - Ultima modificacion: 04/03/2022
 
-    Clase que sirve como nodo en la implementación de listas y arreglos dinamicos
+    Clase que sirve como nodo en la implementacion de listas y arreglos dinamicos
     */ 
 
     //---------------------------PROPIEDADES--------------------------
     protected T value;
 	protected Node<T> next;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * constructor que asigna el valor del nodo
      * @param value

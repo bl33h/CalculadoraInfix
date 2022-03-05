@@ -5,7 +5,7 @@ public class Controller {
     * FileName: Controller
     @version:
     - Creación: 04/03/2022
-    - Última modificación:
+    - Ultima modificación:04/03/2022
     Clase que sirve como controladora en el programa
     */
 

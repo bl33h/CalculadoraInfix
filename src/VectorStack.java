@@ -5,14 +5,14 @@ public class VectorStack <T> extends Stack <T>{
     * @author Fabian Juarez, Sara Echeverria y Jose Pablo Kiesling
     * FileName: VectorStack
     @version:
-    - Creación: 04/03/2022
-    - Última modificación:
+    - Creacion: 04/03/2022
+    - Ultima modificacion:04/03/2022
     */
 
     //---------------------------PROPIEDADES--------------------------
     private Vector<T> vector;
 
-    //---------------------------MÉTODOS------------------------------
+    //---------------------------METODOS------------------------------
     /*****************************************************************
      * Stack: instancia el vector
      */
@@ -32,15 +32,15 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * pull: retorna el último valor ingresado y lo elimina de la pila
+     * pull: retorna el ultimo valor ingresado y lo elimina de la pila
      * @return T
      */
     @Override
     public T pull() {
         T value;
-        if (isEmpty()) //Si la pila está vacía
+        if (isEmpty()) //Si la pila esta vacía
             value = null;
-        else{ //Si se tiene algún elemento
+        else{ //Si se tiene algun elemento
             value = peek();
             vector.remove(vector.get(count()-1));
         }
@@ -49,7 +49,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * peek: retorna el último valor de la pila
+     * peek: retorna el ultimo valor de la pila
      * @return T
      */
     @Override
@@ -59,7 +59,7 @@ public class VectorStack <T> extends Stack <T>{
     //****************************************************************
 
     /*****************************************************************
-     * count: retorna el número de elementos en la pila
+     * count: retorna el numero de elementos en la pila
      * @return int
      */
     @Override
