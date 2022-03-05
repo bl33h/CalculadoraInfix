@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-import src.StackArrayList;
-
 class StackArrayListTest {
 
 	@Test

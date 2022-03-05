@@ -4,10 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import src.DoubleLinkedList;
+import src;
 
 class DoubleLinkedListTest {
-	/*
 	@Test
 	void InsertAtEndEmptyListtest() {
 		DoubleLinkedList<String> testList = new DoubleLinkedList<String>();
@@ -33,22 +32,17 @@ class DoubleLinkedListTest {
 		assertEquals(testList.DeleteAtEnd(), "Hola");
 		assertEquals(testList.Count(), 0);
 	}
-	*/
 		
 	@Test
 	void DeleteAtEndNonEmptyManyElementsListtest() {
 		DoubleLinkedList<String> testList = new DoubleLinkedList<String>();
 		testList.InsertAtEnd("Hola");
 		testList.InsertAtEnd("Mundo");
-		/*
 		assertEquals(testList.Count(), 2);
-		*/
 		assertEquals(testList.DeleteAtEnd(), "Mundo");
-		/*
 		assertEquals(testList.Count(), 1);
 		assertEquals(testList.DeleteAtEnd(), "Hola");
 		assertEquals(testList.Count(), 0);
-		*/
 	}
 
 
